@@ -10,6 +10,7 @@ import kotlinx.coroutines.runBlocking
 
 object FileUtils {
     fun readTextFromRaw(context: Context, resourceId: Int): String {
+
         val inputStream = context.resources.openRawResource(resourceId)
         return inputStream.bufferedReader().use(BufferedReader::readText)
     }
